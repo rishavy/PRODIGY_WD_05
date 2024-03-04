@@ -84,7 +84,7 @@ form>i {
 }
 
 form:active {
-    border: 1px solid green;
+    border: 1px solid #008000;
 }
 
 .today {
@@ -120,6 +120,7 @@ form:active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .today-right i {
@@ -127,12 +128,12 @@ form:active {
 }
 
 .today-detail {
-    margin-top: 10px;
+    margin: 10px 0px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0px 10px 0px 10px;
     color: #fff;
 }
 
@@ -152,7 +153,7 @@ form:active {
     border-radius: 10px;
     box-shadow: 0 0 7px 2px rgba(255, 255, 255, 0.35);
     text-align: center;
-    padding: 15px;
+    padding: 10px 5px 10px 5px;
     transition: transform 0.2s, border 0.2s;
     cursor: pointer;
     color: #fff;
@@ -169,39 +170,56 @@ form:active {
     font-size: 20px;
 }
 
+/* ----------------------------------------- */
+
+@media only screen and (max-width: 768px) {
+    .container {
+      max-width: 90%;
+      min-width: 90%;
+      height: auto;
+    }
+  
+    header {
+      height: 45px; 
+      font-size: 22px;
+    }  
+    form {
+      height: 40px;
+      font-size: 14px;
+    }  
+    .today-left,
+    .today-right {
+      width: 100%;
+    }
+    .today-right {
+      padding-left: 0;
+    }  
+    .future {
+      flex-wrap: wrap;
+    }
+    .future-day {
+      flex-basis: calc(45% - 10px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 10px;
+      height: 125px;
+    }
+  }
+  
 /* ------------------------------------------ */
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:576px) {
     .container {
         max-width: 80%;
-        min-width: 80%;
-        min-height: 78%;
-        max-height: 78%;
+        min-width: 90%;
+        height: auto;
     }
-}
-
-@media only screen and (max-width:950px) {
-    .container {
-        max-width: 70%;
-        min-width: 70%;
-        min-height: 78%;
-        max-height: 78%;
+    .today{
+        height: 230px;
     }
-}
-
-@media only screen and (max-width:872px) {
-    .container {
-        max-width: 70%;
-        min-width: 70%;
-        min-height: 78%;
-        max-height: 78%;
+    .bi {
+        margin-left: 10px;
     }
-}
-
-@media only screen and (max-width:800px) {
-    .container {
-        max-width: 70%;
-        min-width: 70%;
-        min-height: 78%;
-        max-height: 78%;
+    .today-right{
+        margin-right: 10px;
     }
 }
