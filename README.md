@@ -22,7 +22,7 @@ A simple weather application that allows users to check the current weather and 
 
 ## Setup
 
-1. Clone the repository:
+- Clone the repository:
 
    ```bash
    git clone https://github.com/rishavy/PRODIGY_WD_05.git
